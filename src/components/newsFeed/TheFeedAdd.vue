@@ -8,6 +8,12 @@
         />
       </figure>
       <div class="newpst-input">
+        <input
+          placeholder="write this feed titile!"
+          v-model="title"
+          class="newspst-title"
+          type="text"
+        />
         <textarea
           v-model="posts"
           rows="2"
@@ -41,8 +47,10 @@
               </li> -->
             <li>
               <button
-                :disabled="this.posts.length == 0"
-                :class="{ 'is-active': this.posts.length > 0 }"
+                :disabled="this.posts.length == 0 || this.title.length == 0"
+                :class="{
+                  'is-active': this.posts.length > 0 || this.title.length > 0,
+                }"
                 @click="addPost"
               >
                 Post
@@ -61,21 +69,28 @@ export default {
   data() {
     return {
       posts: "",
+      title: "",
     };
   },
   methods: {
-    async addPost() {
-      await this.$axios
-        .post("/v1/board", {
-          title: "",
-          content: this.posts,
-          writer: null,
-        })
-        .then((resposne) => {
-          alert("게시글 등록 완료!");
-          this.posts = "";
-          this.$emit("reload");
-        });
+    addPost() {
+      try {
+        this.$axios
+          .post("/v1/board", {
+            title: this.title,
+            content: this.posts,
+            writer: null,
+          })
+          .catch(function (error) {
+            alert(error);
+          })
+          .then((resposne) => {
+            alert("게시글 등록 완료!");
+            this.title = "";
+            this.posts = "";
+            this.$emit("reload");
+          });
+      } catch (error) {}
     },
   },
 };
@@ -92,5 +107,13 @@ button {
   font-size: 13px;
   font-weight: 600;
   padding: 3px 10px;
+}
+
+.newspst-title {
+  border: 1px solid #eee;
+  font-size: 14px;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 9px;
 }
 </style>

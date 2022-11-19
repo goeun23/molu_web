@@ -9,9 +9,12 @@
     </figure>
     <div class="friend-name">
       <ins
-        ><a href="time-line.html" title="">{{ feed.writer }}</a></ins
+        ><a href="time-line.html" title="">{{ feed.title }}</a></ins
       >
-      <span>published: {{ feed.createdAt }}</span>
+      <span>
+        {{ feed.writer }} |
+        {{ this.$moment(feed.createdAt).startOf("hour").fromNow() }}
+      </span>
     </div>
   </div>
 </template>

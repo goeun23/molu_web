@@ -3,12 +3,14 @@
  import App from './App.vue'
  import LoadScript from 'vue-plugin-load-script';
  import axios from "axios";
+ import moment from 'moment';
 
  const app = createApp(App)
 
  app.use(LoadScript);
 
  app.config.globalProperties.$axios = axios;
+ app.config.globalProperties.$moment = moment;
  //  app.config.globalProperties.$axios = axios.create({
 
  //      proxy: {
