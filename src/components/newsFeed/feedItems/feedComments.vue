@@ -1,5 +1,5 @@
 <template>
-  <div class="coment-area">
+  <div v-if="feed.comments.length > 0" class="coment-area">
     <ul class="we-comet">
       <li>
         <div class="comet-avatar">
@@ -121,3 +121,14 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    feed: {
+      type: [Object, Array],
+      default: () => {},
+    },
+  },
+};
+</script>

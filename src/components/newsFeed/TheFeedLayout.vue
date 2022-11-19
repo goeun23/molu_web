@@ -11,8 +11,8 @@
               <!-- recent activites -->
               <!-- sidebar -->
               <div class="col-lg-6">
-                <the-feed-add />
-                <the-feed-list />
+                <the-feed-add @reload="reload" />
+                <the-feed-list :dataReload="dataReload" />
               </div>
               <the-my-page />
               <!-- sidebar -->
@@ -31,6 +31,16 @@ import TheMyPage from "./TheMyPage.vue";
 import TheShortcuts from "./TheShortcuts.vue";
 export default {
   components: { TheFeedList, TheFeedAdd, TheMyPage, TheShortcuts },
+  data() {
+    return {
+      dataReload: false,
+    };
+  },
+  methods: {
+    reload() {
+      this.dataReload = !this.dataReload;
+    },
+  },
 };
 </script>
     

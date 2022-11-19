@@ -2,14 +2,25 @@
  import { createApp } from 'vue'
  import App from './App.vue'
  import LoadScript from 'vue-plugin-load-script';
+ import axios from "axios";
 
  const app = createApp(App)
+
  app.use(LoadScript);
- //console.log(app)
- //app.config.globalProperties.$loadScript("./src/assets/js/main-min.js")
- //app.loadScript("./src/assets/js/main-min.js")
- //App.$LoadScript("http://code.jquery.com/jquery-2.1.4.min.js")
- //  .LoadScript("/js/main.min.js")
- //  .LoadScript("/js/script.js")
- //  .LoadScript("/js/map-init.js")
+
+ app.config.globalProperties.$axios = axios;
+ //  app.config.globalProperties.$axios = axios.create({
+
+ //      proxy: {
+ //          // url 리소스를 추가해주자
+ //          "^/v1": {
+ //              // 해당 리소스가 있는 url일 경우 타겟으로 baseURL을 변경
+ //              target: 'http://39.118.30.247:8000',
+ //              // 기본 베이스URL을 바꿔줄지 여부
+ //              changeOrigin: true
+ //          },
+
+ //      }
+ //  })
+
  app.mount('#app')
