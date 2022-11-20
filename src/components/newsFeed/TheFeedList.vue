@@ -303,7 +303,10 @@
       </div>
     </div> -->
   </div>
-  <button @click="readMore" class="btn-view btn-load-more">Load More</button>
+  <button v-if="!isLast" @click="readMore" class="btn-view btn-load-more">
+    Load More
+  </button>
+  <span v-else>마지막 글 입니다.</span>
 </template>
 
 <script>
@@ -328,6 +331,7 @@ export default {
         size: 5,
       },
       isinit: false,
+      isLast: false,
     };
   },
 
@@ -355,6 +359,7 @@ export default {
         .get(`v1/board?page=${this.paging.page}&size=${this.paging.size}`)
         .then((response) => {
           const board_list = response.data.data.board_list;
+          this.isLast = response.data.data.last;
           if (this.isinit) {
             this.feeds = toRaw(board_list);
           } else {
