@@ -93,8 +93,10 @@ jQuery(document).ready(function($) {
     //progress line for page loader
     $('body').show();
     NProgress.start();
-    setTimeout(function() { NProgress.done();
-        $('.fade').removeClass('out'); }, 2000);
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 2000);
 
     //--- bootstrap tooltip	
     $(function() {
@@ -147,16 +149,7 @@ jQuery(document).ready(function($) {
         }).data({ 'min': 0, 'max': 20, 'step': 1 });
     }
 
-    if ($.isFunction($.fn.loadMoreResults)) {
-        $('.loadMore').loadMoreResults({
-            displayedItems: 3,
-            showItems: 1,
-            button: {
-                'class': 'btn-load-more',
-                'text': 'Load More'
-            }
-        });
-    }
+
     //===== owl carousel  =====//
     if ($.isFunction($.fn.owlCarousel)) {
         $('.sponsor-logo').owlCarousel({
@@ -309,7 +302,19 @@ jQuery(document).ready(function($) {
             date: '11/12/2018 12:00:00',
             offset: +10
         });
-    };
+    }
+
+    /** Post a Comment **/
+    jQuery(".post-comt-box textarea").on("keydown", function(event) {
+
+        if (event.keyCode == 13) {
+            var comment = jQuery(this).val();
+            var parent = jQuery(".showmore").parent("li");
+            var comment_HTML = '	<li><div class="comet-avatar"><img src="images/resources/comet-1.jpg" alt=""></div><div class="we-comment"><div class="coment-head"><h5><a href="time-line.html" title="">Jason borne</a></h5><span>1 year ago</span><a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a></div><p>' + comment + '</p></div></li>';
+            $(comment_HTML).insertBefore(parent);
+            jQuery(this).val('');
+        }
+    });
 
     //inbox page 	
     //***** Message Star *****//  

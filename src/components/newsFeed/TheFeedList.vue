@@ -303,6 +303,7 @@
       </div>
     </div> -->
   </div>
+  <button @click="readMore" class="btn-view btn-load-more">Load More</button>
 </template>
 
 <script>
@@ -322,23 +323,45 @@ export default {
   data() {
     return {
       feeds: [],
+      paging: {
+        page: 0,
+        size: 5,
+      },
+      isinit: false,
     };
   },
 
   watch: {
     dataReload() {
-      return this.getPostList();
+      // 게시글 등록 완료
+      this.isinit = true;
+      this.getPostList();
     },
   },
   async created() {
-    await this.getPostList();
+    this.isinit = true;
+    this.getPostList();
   },
+  mounted() {},
   methods: {
+    readMore() {
+      // 게시글 더보기
+      this.isinit = false;
+      this.paging.page += 1;
+      this.getPostList();
+    },
     async getPostList() {
-      await this.$axios.get(`v1/board?page=0&size=10`).then((response) => {
-        const board_list = response.data.data.board_list;
-        this.feeds = toRaw(board_list);
-      });
+      return await this.$axios
+        .get(`v1/board?page=${this.paging.page}&size=${this.paging.size}`)
+        .then((response) => {
+          const board_list = response.data.data.board_list;
+          if (this.isinit) {
+            this.feeds = toRaw(board_list);
+          } else {
+            this.feeds = this.feeds.concat(toRaw(board_list));
+          }
+          this.$forceUpdate();
+        });
     },
   },
 };

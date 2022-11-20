@@ -88,7 +88,9 @@ export default {
             alert("게시글 등록 완료!");
             this.title = "";
             this.posts = "";
-            this.$emit("reload");
+            setTimeout(() => {
+              this.$emit("reload");
+            }, 200);
           });
       } catch (error) {}
     },
