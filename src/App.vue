@@ -11,7 +11,9 @@
     <the-left-side-bar />
     <!-- left sidebar menu -->
 
-    <the-feed-layout />
+    <router-view />
+    <!-- 
+    <the-feed-layout /> -->
     <!-- feed layout -->
 
     <the-bottom-bar />
@@ -26,7 +28,7 @@ import TheLeftSideBar from "./components/common/TheLeftSideBar.vue";
 import TheResponsiveHeader from "./components/common/TheResponsiveHeader.vue";
 import TheSidePanel from "./components/common/TheSidePanel.vue";
 import TheTopBar from "./components/common/TheTopBar.vue";
-import TheFeedLayout from "./components/newsFeed/TheFeedLayout.vue";
+//import TheFeedLayout from "./components/TheFeedLayout.vue";
 import TheMyPage from "./components/newsFeed/TheMyPage.vue";
 import TherecentActivity from "./components/newsFeed/TheRecentActivity.vue";
 import TheShortcuts from "./components/newsFeed/TheShortcuts.vue";
@@ -41,7 +43,7 @@ export default {
     TheSidePanel,
     TheBottomBar,
     TheLeftSideBar,
-    TheFeedLayout,
+    //TheFeedLayout,
   },
   name: "App",
   created() {

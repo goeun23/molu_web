@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import TheFeedList from "./TheFeedList.vue";
-import TheFeedAdd from "./TheFeedAdd.vue";
-import TheMyPage from "./TheMyPage.vue";
-import TheShortcuts from "./TheShortcuts.vue";
+import TheFeedList from "../components/newsFeed/TheFeedList.vue";
+import TheFeedAdd from "../components/newsFeed/TheFeedAdd.vue";
+import TheMyPage from "../components/newsFeed/TheMyPage.vue";
+import TheShortcuts from "../components/newsFeed/TheShortcuts.vue";
 export default {
   components: { TheFeedList, TheFeedAdd, TheMyPage, TheShortcuts },
   data() {

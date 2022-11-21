@@ -6,7 +6,11 @@
         <ul class="naves">
           <li>
             <i class="ti-clipboard"></i>
-            <a href="newsfeed.html" title="">News feed</a>
+            <a href="/" title="">News feed</a>
+          </li>
+          <li>
+            <i class="ti-files"></i>
+            <a @click="moveToRewardBoard('0')" title="">Reward Board</a>
           </li>
 
           <li>
@@ -28,3 +32,14 @@
     </aside>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    moveToRewardBoard() {
+      // 0 : juno / 1 : luna
+      this.$router.push("/reward");
+    },
+  },
+};
+</script>
