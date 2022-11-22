@@ -211,8 +211,8 @@ export default {
       background: require(`../assets/images/sticker.png`),
       sticker: require(`../assets/images/color.jpeg`),
       countofReward: {
-        0: 10,
-        1: 8,
+        0: 0,
+        1: 0,
       },
       isExpand: true,
       rewardObj: {
@@ -250,8 +250,20 @@ export default {
           this.$forceUpdate();
         });
     },
+    async getStickerStatus() {
+      // 1 luna 2 juno
+      await this.$axios.get(`/v1/member/sticker/1`).then((response) => {
+        this.countofReward[1] = response.data.data.total_sticker_ea;
+      });
+
+      await this.$axios.get(`/v1/member/sticker/2`).then((response1) => {
+        this.countofReward[0] = response1.data.data.total_sticker_ea;
+      });
+
+    },
   },
   mounted() {
+    this.getStickerStatus();
     for (let i = 0; i < 30; i++) {
       this.rewardBox.push({
         idx: `box-${i + 1}`,
@@ -283,8 +295,8 @@ export default {
 .wrapper {
   width: 100%;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(5, 90px);
+  grid-gap: 0.3%;
+  grid-template-columns: repeat(5, 20%);
   justify-content: center;
   align-content: center;
   grid-template-rows: auto;
@@ -296,5 +308,9 @@ select {
 }
 .chosen-container {
   display: none !important;
+}
+
+.pepl-info {
+  padding-bottom: 15px;
 }
 </style>
