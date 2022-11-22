@@ -19,16 +19,103 @@
                         <a class="active" href="#frends" data-toggle="tab"
                           >Juno</a
                         >
-                        <span>{{ countofReward["0"] }}</span>
                       </li>
                       <li class="nav-item">
-                        <a class="" href="#frends-req" data-toggle="tab">Luna</a
-                        ><span>{{ countofReward["1"] }}</span>
+                        <a class="" href="#frends-req" data-toggle="tab"
+                          >Luna</a
+                        >
                       </li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
+                      <ul class="nearby-contct">
+                        <li>
+                          <div
+                            class="accordion"
+                            id="accordion"
+                            style="margin-top: 0; width: 100%"
+                          >
+                            <div class="card">
+                              <div class="card-header" id="headingfive">
+                                <h5 class="mb-0">
+                                  <button
+                                    class="btn btn-link"
+                                    type="button"
+                                    :aria-expanded="isExpand"
+                                    @click="showExpand"
+                                  >
+                                    Give Rewards
+                                  </button>
+                                </h5>
+                              </div>
+                              <div class="collapse" :class="{ show: isExpand }">
+                                <div class="card-body">
+                                  <div class="editing-info">
+                                    <h5 class="f-title">
+                                      <i class="ti-info-alt"></i> Reward Details
+                                    </h5>
+                                    <form method="post">
+                                      <div class="form-group half">
+                                        <span>From {{ rewardObj.from }}</span>
+                                        <select v-model="rewardObj.from">
+                                          <option value="2">Juno</option>
+                                          <option value="1">Luna</option>
+                                        </select>
+                                        <i class="mtrl-select"></i>
+                                      </div>
+                                      <div class="form-group half">
+                                        <span>To</span>
+
+                                        <select
+                                          style="display: in !important"
+                                          v-model="rewardObj.to"
+                                        >
+                                          <option value="2">Juno</option>
+                                          <option value="1">Luna</option>
+                                        </select>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <span>Count of Rewards</span>
+                                        <select v-model="rewardObj.ea">
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <textarea
+                                          v-model="rewardObj.reason"
+                                          rows="4"
+                                          id="textarea"
+                                          required="required"
+                                        ></textarea>
+                                        <label
+                                          class="control-label"
+                                          for="textarea"
+                                          >Description</label
+                                        ><i class="mtrl-select"></i>
+                                      </div>
+                                      <div class="submit-btns">
+                                        <button
+                                          @click="saveReward"
+                                          type="button"
+                                          class="mtr-btn"
+                                        >
+                                          <span>Save</span>
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                       <div class="tab-pane active fade show" id="frends">
                         <ul class="nearby-contct">
                           <li>
@@ -38,18 +125,8 @@
                                   <a>🐻 주노짱 Reward Board</a>
                                 </h4>
                                 <span>{{ countofReward["0"] }}/30</span>
-
-                                <a
-                                  href="#"
-                                  title=""
-                                  class="add-butn"
-                                  data-ripple=""
-                                  >Reward to Juno</a
-                                >
                               </div>
                             </div>
-                          </li>
-                          <li>
                             <div class="nearly-pepls">
                               <div class="wrapper">
                                 <div
@@ -80,17 +157,8 @@
                                   <a>🐻 루나짱 Reward Board</a>
                                 </h4>
                                 <span>{{ countofReward["1"] }}/30</span>
-                                <a
-                                  href="#"
-                                  title=""
-                                  class="add-butn"
-                                  data-ripple=""
-                                  >Reward to Luna</a
-                                >
                               </div>
                             </div>
-                          </li>
-                          <li>
                             <div class="nearly-pepls">
                               <div class="wrapper">
                                 <div
@@ -117,6 +185,7 @@
                   </div>
                 </div>
               </div>
+
               <!-- sidebar -->
               <div id="reward-ui">luna</div>
             </div>
@@ -145,11 +214,41 @@ export default {
         0: 10,
         1: 8,
       },
+      isExpand: true,
+      rewardObj: {
+        from: "1",
+        to: "1",
+        ea: "1",
+        reason: "",
+      },
     };
   },
   methods: {
     reload() {
       this.dataReload = !this.dataReload;
+    },
+    showExpand() {
+      this.isExpand = !this.isExpand;
+    },
+    async saveReward() {
+      console.log(this.rewardObj);
+
+      return await this.$axios
+        .get(
+          `/v1/member/sticker/simple?to=${this.rewardObj.to}
+          &from=${this.rewardObj.from}&reason=${encodeURIComponent(
+            this.rewardObj.reason
+          )}&ea=${this.rewardObj.ea}
+          `
+        )
+        .then((response) => {
+          const { result_message } = response.data;
+          alert(result_message);
+          this.rewardObj.reason = "";
+          this.rewardObj.ea = "1";
+
+          this.$forceUpdate();
+        });
     },
   },
   mounted() {
@@ -190,5 +289,12 @@ export default {
   align-content: center;
   grid-template-rows: auto;
   grid-auto-flow: row;
+}
+
+select {
+  display: inline-block !important;
+}
+.chosen-container {
+  display: none !important;
 }
 </style>
