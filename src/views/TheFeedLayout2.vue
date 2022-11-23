@@ -124,7 +124,7 @@
                                 <h4>
                                   <a>🐻 주노짱 Reward Board</a>
                                 </h4>
-                                <span>{{ countofReward["0"] }}/30</span>
+                                <span>{{ countofReward["2"] }}/30</span>
                               </div>
                             </div>
                             <div class="nearly-pepls">
@@ -136,8 +136,13 @@
                                   class="box"
                                 >
                                   <img
+                                    @click="
+                                      index < countofReward['2']
+                                        ? showDetails(index, 'juno')
+                                        : () => false
+                                    "
                                     :src="
-                                      index < countofReward['0']
+                                      index <= countofReward['2']
                                         ? sticker
                                         : background
                                     "
@@ -168,8 +173,13 @@
                                   class="box"
                                 >
                                   <img
-                                    :src="
+                                    @click="
                                       index < countofReward['1']
+                                        ? showDetails(index, 'luna')
+                                        : () => false
+                                    "
+                                    :src="
+                                      index <= countofReward['1']
                                         ? sticker
                                         : background
                                     "
@@ -197,6 +207,8 @@
 </template>
 
 <script>
+import { toRaw } from "vue";
+
 import TheFeedList from "../components/newsFeed/TheFeedList.vue";
 import TheFeedAdd from "../components/newsFeed/TheFeedAdd.vue";
 import TheMyPage from "../components/newsFeed/TheMyPage.vue";
@@ -211,10 +223,12 @@ export default {
       background: require(`../assets/images/sticker.png`),
       sticker: require(`../assets/images/color.jpeg`),
       countofReward: {
-        0: 0,
-        1: 0,
+        1: 0, // j
+        2: 0, // l
       },
-      isExpand: true,
+      reward1: [],
+      reward2: [],
+      isExpand: false,
       rewardObj: {
         from: "1",
         to: "1",
@@ -224,6 +238,18 @@ export default {
     };
   },
   methods: {
+    showDetails(index, name) {
+      const rewardObj =
+        name == "juno" ? this.reward2[index] : this.reward1[index];
+
+      
+      const { created_at, from_member_name, reason, ea } = rewardObj;
+      alert(
+        `${this.$moment(created_at)
+          .startOf("hour")
+          .fromNow()},\n ✨${from_member_name}가 ${reason}(해)서 🌻칭찬스티카🌻를 ${ea}개를 줬어요.✨`
+      );
+    },
     reload() {
       this.dataReload = !this.dataReload;
     },
@@ -231,8 +257,6 @@ export default {
       this.isExpand = !this.isExpand;
     },
     async saveReward() {
-      console.log(this.rewardObj);
-
       return await this.$axios
         .get(
           `/v1/member/sticker/simple?to=${this.rewardObj.to}
@@ -254,12 +278,13 @@ export default {
       // 1 luna 2 juno
       await this.$axios.get(`/v1/member/sticker/1`).then((response) => {
         this.countofReward[1] = response.data.data.total_sticker_ea;
+        this.reward1 = toRaw(response.data.data.sticker);
       });
 
       await this.$axios.get(`/v1/member/sticker/2`).then((response1) => {
-        this.countofReward[0] = response1.data.data.total_sticker_ea;
+        this.countofReward[2] = response1.data.data.total_sticker_ea;
+        this.reward2 = toRaw(response1.data.data.sticker);
       });
-
     },
   },
   mounted() {
