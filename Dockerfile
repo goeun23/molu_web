@@ -1,15 +1,7 @@
 FROM node:16
 
-WORKDIR /src/
-
-COPY package*.json ./
-
-
+COPY . /app
+WORKDIR /app
 RUN npm install
-
-
-COPY . .
-
-EXPOSE 8080
 
 CMD [ "npm", "run", "serve" ]
