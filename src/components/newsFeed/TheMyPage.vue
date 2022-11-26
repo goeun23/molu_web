@@ -15,12 +15,7 @@
               ><i class="ti-comment"></i
               ><a href="insight.html" title="">Messages <em>9</em></a></span
             >
-            <span
-              ><i class="ti-bell"></i
-              ><a href="insight.html" title=""
-                >Notifications <em>2</em></a
-              ></span
-            >
+            
           </div>
           <div class="page-likes">
             <ul class="nav nav-tabs likes-btn">
