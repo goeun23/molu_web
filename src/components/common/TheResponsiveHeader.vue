@@ -6,7 +6,7 @@
       </span>
       <span class="mh-text">
         <a href="newsfeed.html" title=""
-          ><img src="/images/logo2.png" alt=""
+          ><img src="/images/logo.png" alt=""
         /></a>
       </span>
       <span class="mh-btns-right">

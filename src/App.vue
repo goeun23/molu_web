@@ -12,7 +12,7 @@
     <!-- left sidebar menu -->
 
     <router-view />
-    
+
     <!-- feed layout -->
 
     <the-bottom-bar />
@@ -73,4 +73,7 @@ export default {
 @import url(@/assets/css/style.css);
 @import url(@/assets/css/color.css);
 @import url(@/assets/css/responsive.css);
+.mh-head {
+  background: #ccc !important;
+}
 </style>
