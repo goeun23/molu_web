@@ -6,19 +6,19 @@
         <ul class="naves">
           <li>
             <i class="ti-clipboard"></i>
-            <a href="/" title="">News feed</a>
+            <a href="/" title="">📩비밀게시판📩</a>
           </li>
           <li>
             <i class="ti-files"></i>
-            <a @click="moveToRewardBoard('0')" title="">Reward Board</a>
+            <a @click="moveToRewardBoard('0')" title="">🌻칭찬시티카🌻</a>
           </li>
 
           <li>
             <i class="ti-files"></i>
-            <a href="fav-page.html" title="">My pages</a>
+            <a href="fav-page.html" title="">제이지 멋찌다 멋쪄</a>
           </li>
 
-          <li>
+          <!-- <li>
             <i class="ti-comments-smiley"></i>
             <a href="messages.html" title="">Messages</a>
           </li>
@@ -26,7 +26,7 @@
           <li>
             <i class="ti-power-off"></i>
             <a href="landing.html" title="">Logout</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </aside>
