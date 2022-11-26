@@ -12,8 +12,7 @@
     <!-- left sidebar menu -->
 
     <router-view />
-    <!-- 
-    <the-feed-layout /> -->
+    
     <!-- feed layout -->
 
     <the-bottom-bar />
