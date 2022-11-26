@@ -3,7 +3,7 @@
     <figure>
       <h1
         class="emoji-area__emoji"
-        :id="`random_emoji_${feed.id}`"
+        :id="`random_emoji_${feed.board_id}`"
         alt="profile_image"
       />
     </figure>
@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       image: "",
+      random: "",
     };
   },
   mounted() {
@@ -42,11 +43,12 @@ export default {
   methods: {
     profile_image() {
       const emojiField = document.getElementById(
-        `random_emoji_${this.feed.id}`
+        `random_emoji_${this.feed.board_id}`
       );
       fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/").then(
         (response) => {
           response.json().then((emoji) => {
+            //this.random = emoji.emoji;
             emojiField.innerHTML = emoji.emoji;
           });
         }
