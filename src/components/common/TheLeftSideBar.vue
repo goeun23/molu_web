@@ -4,63 +4,18 @@
       <ul class="left-menu">
         <li>
           <a
-            href="newsfeed.html"
-            title="Newsfeed Page"
+            @click="moveTo('newsfeed')"
+            title="📩비밀게시판📩"
             data-toggle="tooltip"
             data-placement="right"
-            ><i class="ti-magnet"></i
+            ><i class="ti-clipboard"></i
           ></a>
         </li>
 
         <li>
           <a
-            href="insights.html"
-            title="Account Stats"
-            data-toggle="tooltip"
-            data-placement="right"
-            ><i class="ti-stats-up"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="inbox.html"
-            title="inbox"
-            data-toggle="tooltip"
-            data-placement="right"
-            ><i class="ti-import"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="messages.html"
-            title="Messages"
-            data-toggle="tooltip"
-            data-placement="right"
-            ><i class="ti-comment-alt"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="edit-account-setting.html"
-            title="Setting"
-            data-toggle="tooltip"
-            data-placement="right"
-            ><i class="ti-panel"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="faq.html"
-            title="Faq's"
-            data-toggle="tooltip"
-            data-placement="right"
-            ><i class="ti-light-bulb"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="timeline-friends.html"
-            title="Friends"
+            @click="moveTo('reward')"
+            title="🌻칭찬시티카🌻"
             data-toggle="tooltip"
             data-placement="right"
             ><i class="ti-themify-favicon"></i
@@ -68,23 +23,25 @@
         </li>
         <li>
           <a
-            href="widgets.html"
-            title="Widgets"
+            @click="moveTo('reward')"
+            title="Messages"
             data-toggle="tooltip"
             data-placement="right"
-            ><i class="ti-eraser"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="notifications.html"
-            title="Notification"
-            data-toggle="tooltip"
-            data-placement="right"
-            ><i class="ti-bookmark-alt"></i
+            ><i class="ti-comment-alt"></i
           ></a>
         </li>
       </ul>
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  methods: {
+    moveTo(path) {
+      this.$router.push(path);
+    },
+  },
+};
+</script>

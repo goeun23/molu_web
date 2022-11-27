@@ -9,7 +9,7 @@
     </figure>
     <div class="friend-name">
       <ins
-        ><a href="time-line.html" title="">{{ feed.title }}</a></ins
+        ><a title="">{{ feed.title }}</a></ins
       >
       <span>
         {{ feed.writer }} |

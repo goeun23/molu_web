@@ -52,11 +52,9 @@ export default {
           ).then(() => {
             this.$loadScript("/js/main-min.js").then(() => {
               this.$loadScript("/js/script.js").then(() => {
-                this.$loadScript("/js/map-init.js").then(() => {
-                  this.$loadScript(
-                    "https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"
-                  ).then(() => {});
-                });
+                this.$loadScript(
+                  "https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"
+                );
               });
             });
           });

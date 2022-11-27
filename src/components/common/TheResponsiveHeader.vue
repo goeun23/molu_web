@@ -2,12 +2,10 @@
   <div class="responsive-header">
     <div class="mh-head first Sticky">
       <span class="mh-btns-left">
-        <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
+        <a class=""><i class="fa fa-align-justify"></i></a>
       </span>
       <span class="mh-text">
-        <a href="newsfeed.html" title=""
-          ><img src="/images/logo.png" alt=""
-        /></a>
+        <a title=""><img src="/images/logo.png" alt="" /></a>
       </span>
       <span class="mh-btns-right">
         <a class="fa fa-sliders" href="#shoppingbag"></a>

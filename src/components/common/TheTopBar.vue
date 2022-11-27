@@ -1,179 +1,25 @@
 <template>
   <div class="topbar stick">
     <div class="logo">
-      <a title="" href="newsfeed.html"><img src="/images/logo.png" alt="" /></a>
+      <a title=""><img src="/images/logo.png" alt="" /></a>
     </div>
 
     <div class="top-area">
       <div class="top-search">
-        <form method="post" class="">
-          <input type="text" placeholder="Search Friend" />
-          <button data-ripple><i class="ti-search"></i></button>
-        </form>
+        <div class="search-box">
+          <input v-model="message" type="text" placeholder="📩비밀글 남기기!" />
+          <button @click="sendPost()" data-ripple>
+            <i class="ti-themify-favicon"></i>
+          </button>
+        </div>
       </div>
-      <ul class="setting-area">
-        <li>
-          <a href="newsfeed.html" title="Home" data-ripple=""
-            ><i class="ti-home"></i
-          ></a>
-        </li>
-        <li>
-          <a href="#" title="Notification" data-ripple="">
-            <i class="ti-bell"></i><span>20</span>
-          </a>
-          <div class="dropdowns">
-            <span>4 New Notifications</span>
-            <ul class="drops-menu">
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-1.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>sarah Loren</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag green">New</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-2.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Jhon doe</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag red">Reply</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-3.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Andrew</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag blue">Unseen</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-4.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Tom cruse</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag">New</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-5.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Amy</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag">New</span>
-              </li>
-            </ul>
-            <a href="notifications.html" title="" class="more-mesg"
-              >view more</a
-            >
-          </div>
-        </li>
-        <li>
-          <a href="#" title="Messages" data-ripple=""
-            ><i class="ti-comment"></i><span>12</span></a
-          >
-          <div class="dropdowns">
-            <span>5 New Messages</span>
-            <ul class="drops-menu">
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-1.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>sarah Loren</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag green">New</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-2.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Jhon doe</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag red">Reply</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-3.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Andrew</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag blue">Unseen</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-4.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Tom cruse</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag">New</span>
-              </li>
-              <li>
-                <a href="notifications.html" title="">
-                  <img src="/images/resources/thumb-5.jpg" alt="" />
-                  <div class="mesg-meta">
-                    <h6>Amy</h6>
-                    <span>Hi, how r u dear ...?</span>
-                    <i>2 min ago</i>
-                  </div>
-                </a>
-                <span class="tag">New</span>
-              </li>
-            </ul>
-            <a href="messages.html" title="" class="more-mesg">view more</a>
-          </div>
-        </li>
-        <li>
-          <a href="#" title="Languages" data-ripple=""
-            ><i class="fa fa-globe"></i
-          ></a>
-          <div class="dropdowns languages">
-            <a href="#" title=""><i class="ti-check"></i>English</a>
-            <a href="#" title="">Arabic</a>
-            <a href="#" title="">Dutch</a>
-            <a href="#" title="">French</a>
-          </div>
-        </li>
-      </ul>
+
       <div class="user-img">
-        <img src="/images/resources/admin.jpg" alt="" />
+        <img src="/images/admin.png" alt="" />
         <span class="status f-online"></span>
         <div class="user-setting">
-          <a href="#" title=""><span class="status f-online"></span>online</a>
-          <a href="#" title=""><span class="status f-away"></span>away</a>
-          <a href="#" title=""><span class="status f-off"></span>offline</a>
           <a href="#" title=""><i class="ti-user"></i> view profile</a>
           <a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
-          <a href="#" title=""><i class="ti-target"></i>activity log</a>
-          <a href="#" title=""><i class="ti-settings"></i>account setting</a>
           <a href="#" title=""><i class="ti-power-off"></i>log out</a>
         </div>
       </div>
@@ -181,3 +27,84 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  emits: ["reloadTop"],
+  data() {
+    return {
+      message: "",
+      title: "",
+    };
+  },
+  methods: {
+    sendPost() {
+      this.title = `${this.$moment(new Date()).format(
+        "MMMM Do YYYY, a h:mm:ss"
+      )} 작성된 글 입니다.`;
+      try {
+        this.$axios
+          .post("/v1/board", {
+            title: this.title,
+            content: this.message,
+            writer: null,
+          })
+          .catch(function (error) {
+            alert(error);
+          })
+          .then((resposne) => {
+            alert("게시글 등록 완료!");
+            this.message = "";
+
+            setTimeout(() => {
+              this.$router.go(this.$router.currentRoute);
+            }, 200);
+          });
+      } catch (error) {}
+    },
+  },
+};
+</script>
+
+<style scoped>
+.search-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.search-box button {
+  border: none;
+}
+
+.search-box input {
+  background: #f4f2f2 none repeat scroll 0 0;
+  border: medium none;
+  font-size: 13px;
+  padding: 13px 30px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.top-search input {
+  background: #f4f2f2 none repeat scroll 0 0;
+  border: medium none;
+  font-size: 13px;
+  padding: 13px 30px;
+  width: 100%;
+  border-radius: 5px;
+}
+.top-search button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #b6b6b6;
+  font-size: 15px;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+</style>

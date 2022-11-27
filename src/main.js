@@ -8,15 +8,19 @@
 
  const TheFeedLayout = () =>
      import ('./views/TheFeedLayout.vue');
- ///Users/goeun/Desktop/molu_web/src/views/TheFeedLayout.vue
- ///Users/goeun/Desktop/molu_web/src/views/TheRewardBoardLayout.vue
+
  const TheRewardBoardLayout = () =>
      import ('./views/TheFeedLayout2.vue');
+
+
+ const TheNotificationLayout = () =>
+     import ('./views/TheMessageLayout.vue');
 
  const routes = [
      { path: '/', component: TheFeedLayout },
      { path: '/newsfeed', component: TheFeedLayout },
      { path: '/reward', component: TheRewardBoardLayout },
+     // { path: '/notification', component: TheNotificationLayout },
  ]
 
  // Now the app has started!

@@ -8,7 +8,7 @@
               <the-shortcuts />
               <!-- Shortcuts -->
 
-              <div class="col-lg-6">
+              <div class="col-lg-8">
                 <div class="central-meta">
                   <div class="frnds">
                     <ul class="nav nav-tabs">
@@ -160,8 +160,8 @@ export default {
 .wrapper {
   width: 100%;
   display: grid;
-  grid-gap: 1.3%;
-  grid-template-columns: repeat(5, 17%);
+  grid-gap: 0.3%;
+  grid-template-columns: repeat(5, 14%);
   justify-content: center;
   align-content: center;
   grid-template-rows: auto;

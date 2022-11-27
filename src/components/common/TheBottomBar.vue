@@ -8,7 +8,6 @@
               >Templates Hub</a
             ></span
           >
-          <i><img src="/images/credit-cards.png" alt="" /></i>
         </div>
       </div>
     </div>
