@@ -6,14 +6,14 @@
         <div class="your-page">
           <figure>
             <a href="#" title=""
-              ><img src="/images/resources/friend-avatar9.jpg" alt=""
+              ><img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar9.jpg" alt=""
             /></a>
           </figure>
           <div class="page-meta">
             <a href="#" title="" class="underline">My page</a>
             <span
               ><i class="ti-comment"></i
-              ><a href="insight.html" title="">Messages <em>9</em></a></span
+              ><a  title="">Messages <em>9</em></a></span
             >
             
           </div>

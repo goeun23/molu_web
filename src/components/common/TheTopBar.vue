@@ -1,7 +1,7 @@
 <template>
   <div class="topbar stick">
     <div class="logo">
-      <a title=""><img src="/images/logo.png" alt="" /></a>
+      <a title=""><img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/logo.png" alt="" /></a>
     </div>
 
     <div class="top-area">
@@ -15,7 +15,7 @@
       </div>
 
       <div class="user-img">
-        <img src="/images/admin.png" alt="" />
+        <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/admin.png" alt="" />
         <span class="status f-online"></span>
         <div class="user-setting">
           <a href="#" title=""><i class="ti-user"></i> view profile</a>

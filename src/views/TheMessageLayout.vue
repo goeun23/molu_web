@@ -3,7 +3,7 @@
   <div class="theme-layout">
     <section>
       <div class="feature-photo">
-        <figure><img src="images/resources/timeline-1.jpg" alt="" /></figure>
+        <figure><img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/timeline-1.jpg" alt="" /></figure>
         <div class="add-btn">
           <span>1205 followers</span>
           <a href="#" title="" data-ripple="">Add Friend</a>
@@ -20,7 +20,7 @@
             <div class="col-lg-2 col-sm-3">
               <div class="user-avatar">
                 <figure>
-                  <img src="images/resources/user-avatar.jpg" alt="" />
+                  <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/user-avatar.jpg" alt="" />
                   <form class="edit-phto">
                     <i class="fa fa-camera-retro"></i>
                     <label class="fileContainer">
@@ -98,100 +98,100 @@
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-11.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-11.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-1.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-1.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-22.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-22.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-2.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-2.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-33.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-33.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-3.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-3.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-44.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-44.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-4.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-4.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-55.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-55.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-5.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-5.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-66.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-66.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-6.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-6.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-77.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-77.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-7.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-7.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-88.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-88.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-8.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-8.jpg" alt=""
                           /></a>
                         </li>
                         <li>
                           <a
                             class="strip"
-                            href="images/resources/recent-99.jpg"
+                            href="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-99.jpg"
                             title=""
                             data-strip-group="mygroup"
                             data-strip-group-options="loop: false"
                           >
-                            <img src="images/resources/recent-9.jpg" alt=""
+                            <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/recent-9.jpg" alt=""
                           /></a>
                         </li>
                       </ul>
@@ -244,7 +244,7 @@
                           <li>
                             <figure>
                               <img
-                                src="images/resources/friend-avatar.jpg"
+                                src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar.jpg"
                                 alt=""
                               />
                             </figure>
@@ -257,7 +257,7 @@
                           <li>
                             <figure>
                               <img
-                                src="images/resources/friend-avatar2.jpg"
+                                src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar2.jpg"
                                 alt=""
                               />
                             </figure>
@@ -270,7 +270,7 @@
                           <li>
                             <figure>
                               <img
-                                src="images/resources/friend-avatar3.jpg"
+                                src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar3.jpg"
                                 alt=""
                               />
                             </figure>
@@ -286,7 +286,7 @@
                           <li>
                             <figure>
                               <img
-                                src="images/resources/friend-avatar4.jpg"
+                                src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar4.jpg"
                                 alt=""
                               />
                             </figure>
@@ -302,7 +302,7 @@
                           <li>
                             <figure>
                               <img
-                                src="images/resources/friend-avatar5.jpg"
+                                src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar5.jpg"
                                 alt=""
                               />
                             </figure>
@@ -315,7 +315,7 @@
                           <li>
                             <figure>
                               <img
-                                src="images/resources/friend-avatar6.jpg"
+                                src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar6.jpg"
                                 alt=""
                               />
                             </figure>
@@ -341,7 +341,7 @@
                         <div
                           class="bg-image"
                           style="
-                            background-image: url(images/resources/baner-widgetbg.jpg);
+                            background-image: url(https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/baner-widgetbg.jpg);
                           "
                         ></div>
                         <div class="baner-top">
@@ -361,7 +361,7 @@
                         <li>
                           <figure>
                             <img
-                              src="images/resources/friend-avatar2.jpg"
+                              src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar2.jpg"
                               alt=""
                             />
                           </figure>
@@ -377,7 +377,7 @@
                         <li>
                           <figure>
                             <img
-                              src="images/resources/friend-avatar4.jpg"
+                              src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar4.jpg"
                               alt=""
                             />
                           </figure>
@@ -393,7 +393,7 @@
                         <li>
                           <figure>
                             <img
-                              src="images/resources/friend-avatar6.jpg"
+                              src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar6.jpg"
                               alt=""
                             />
                           </figure>
@@ -409,7 +409,7 @@
                         <li>
                           <figure>
                             <img
-                              src="images/resources/friend-avatar8.jpg"
+                              src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar8.jpg"
                               alt=""
                             />
                           </figure>
@@ -425,7 +425,7 @@
                         <li>
                           <figure>
                             <img
-                              src="images/resources/friend-avatar3.jpg"
+                              src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/friend-avatar3.jpg"
                               alt=""
                             />
                           </figure>

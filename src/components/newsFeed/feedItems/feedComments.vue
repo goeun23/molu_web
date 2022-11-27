@@ -3,7 +3,7 @@
     <ul class="we-comet">
       <li>
         <div class="comet-avatar">
-          <img src="/images/resources/comet-1.jpg" alt="" />
+          <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/comet-1.jpg" alt="" />
         </div>
         <div class="we-comment">
           <div class="coment-head">
@@ -23,7 +23,7 @@
         <ul>
           <li>
             <div class="comet-avatar">
-              <img src="/images/resources/comet-2.jpg" alt="" />
+              <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/comet-2.jpg" alt="" />
             </div>
             <div class="we-comment">
               <div class="coment-head">
@@ -45,7 +45,7 @@
           </li>
           <li>
             <div class="comet-avatar">
-              <img src="/images/resources/comet-3.jpg" alt="" />
+              <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/comet-3.jpg" alt="" />
             </div>
             <div class="we-comment">
               <div class="coment-head">
@@ -67,7 +67,7 @@
       </li>
       <li>
         <div class="comet-avatar">
-          <img src="/images/resources/comet-1.jpg" alt="" />
+          <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/comet-1.jpg" alt="" />
         </div>
         <div class="we-comment">
           <div class="coment-head">
@@ -92,7 +92,7 @@
       </li>
       <li class="post-comment">
         <div class="comet-avatar">
-          <img src="/images/resources/comet-1.jpg" alt="" />
+          <img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/resources/comet-1.jpg" alt="" />
         </div>
         <div class="post-comt-box">
           <form method="post">

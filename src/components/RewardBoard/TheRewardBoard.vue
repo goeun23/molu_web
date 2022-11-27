@@ -60,8 +60,10 @@ export default {
   },
   data() {
     return {
-      background: require(`@/assets/images/sticker.png`),
-      sticker: require(`@/assets/images/color.jpeg`),
+      background:
+        "https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/sticker.png",
+      sticker:
+        "https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/color.jpeg",
     };
   },
   methods: {

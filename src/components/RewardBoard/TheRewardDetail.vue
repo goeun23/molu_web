@@ -52,26 +52,10 @@ export default {
       default: 2,
     },
   },
-  data() {
-    return {
-      background: require(`@/assets/images/sticker.png`),
-      sticker: require(`@/assets/images/color.jpeg`),
-    };
-  },
+
   methods: {
     timeset(created_at) {
       return this.$moment(created_at).startOf("hour").fromNow();
-    },
-    showDetails(index, name) {
-      const rewardObj =
-        name == "juno" ? this.reward2[index] : this.reward1[index];
-
-      const { created_at, from_member_name, reason, ea } = rewardObj;
-      alert(
-        `${this.$moment(created_at)
-          .startOf("hour")
-          .fromNow()},\n ✨${from_member_name}가 ${reason}(해)서 🌻칭찬스티카🌻를 ${ea}개를 줬어요.✨`
-      );
     },
   },
 };

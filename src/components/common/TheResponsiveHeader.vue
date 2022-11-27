@@ -5,7 +5,7 @@
         <a class=""><i class="fa fa-align-justify"></i></a>
       </span>
       <span class="mh-text">
-        <a title=""><img src="/images/logo.png" alt="" /></a>
+        <a title=""><img src="https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/logo.png" alt="" /></a>
       </span>
       <span class="mh-btns-right">
         <a class="fa fa-sliders" href="#shoppingbag"></a>
