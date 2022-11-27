@@ -448,9 +448,8 @@ iframe {
 /*-- page loader ----*/
 
 #topcontrol {
-    border-radius: 5px;
     color: #fff;
-    display: inline-block;
+    display: none;
     font-size: 30px;
     line-height: 40px;
     text-align: center;

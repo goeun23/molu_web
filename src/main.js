@@ -35,6 +35,27 @@
  app.use(LoadScript);
 
  app.config.globalProperties.$axios = axios;
+ moment.updateLocale("kr", {
+     relativeTime: {
+         future: "in %s",
+         past: "%s ago",
+         s: function(number, withoutSuffix, key, isFuture) {
+             return number + " seconds";
+         },
+         m: "1 minutes",
+         mm: function(number, withoutSuffix, key, isFuture) {
+             return number + " minutes";
+         },
+         h: "an hour",
+         hh: "%d hours",
+         d: "a day",
+         dd: "%d days",
+         M: "a month",
+         MM: "%d months",
+         y: "a year",
+         yy: "%d years",
+     },
+ });
  app.config.globalProperties.$moment = moment;
 
 

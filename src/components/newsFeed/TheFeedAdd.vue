@@ -21,30 +21,7 @@
         ></textarea>
         <div class="attachments">
           <ul>
-            <!-- <li>
-                <i class="fa fa-music"></i>
-                <label class="fileContainer">
-                  <input type="file" />
-                </label>
-              </li>
-              <li>
-                <i class="fa fa-image"></i>
-                <label class="fileContainer">
-                  <input type="file" />
-                </label>
-              </li>
-              <li>
-                <i class="fa fa-video-camera"></i>
-                <label class="fileContainer">
-                  <input type="file" />
-                </label>
-              </li>
-              <li>
-                <i class="fa fa-camera"></i>
-                <label class="fileContainer">
-                  <input type="file" />
-                </label>
-              </li> -->
+           
             <li>
               <button
                 :disabled="this.posts.length == 0 || this.title.length == 0"
@@ -92,7 +69,9 @@ export default {
               this.$emit("reload");
             }, 200);
           });
-      } catch (error) {}
+      } catch (error) {
+        alert(error);
+      }
     },
   },
 };

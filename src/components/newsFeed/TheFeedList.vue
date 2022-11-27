@@ -4,7 +4,7 @@
       <div class="user-post">
         <feed-writer :feed="feed" />
         <feed-contents :feed="feed" />
-        <feed-comments :feed="feed" />
+        <feed-comments :feed="feed" @reload="reload" />
       </div>
     </div>
   </div>
@@ -53,6 +53,10 @@ export default {
   },
   mounted() {},
   methods: {
+    reload() {
+      this.isinit = false;
+      this.getPostList();
+    },
     readMore() {
       // 게시글 더보기
       this.isinit = false;

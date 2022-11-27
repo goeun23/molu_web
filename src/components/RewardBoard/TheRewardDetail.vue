@@ -55,7 +55,7 @@ export default {
 
   methods: {
     timeset(created_at) {
-      return this.$moment(created_at).startOf("hour").fromNow();
+      return this.$moment(created_at).fromNow();
     },
   },
 };

@@ -21,14 +21,7 @@
               :id="item.idx"
               class="box"
             >
-              <img
-                @click="
-                  index < total_sticker_ea
-                    ? showDetails(index, 'luna')
-                    : () => false
-                "
-                :src="index < total_sticker_ea ? sticker : background"
-              />
+              <img :src="index < total_sticker_ea ? sticker : background" />
             </div>
           </div>
         </div>
@@ -65,19 +58,6 @@ export default {
       sticker:
         "https://molu-s3.s3.ap-northeast-1.amazonaws.com/images/color.jpeg",
     };
-  },
-  methods: {
-    showDetails(index, name) {
-      const rewardObj =
-        name == "juno" ? this.reward2[index] : this.reward1[index];
-
-      const { created_at, from_member_name, reason, ea } = rewardObj;
-      alert(
-        `${this.$moment(created_at)
-          .startOf("hour")
-          .fromNow()},\n ✨${from_member_name}가 ${reason}(해)서 🌻칭찬스티카🌻를 ${ea}개를 줬어요.✨`
-      );
-    },
   },
 };
 </script>

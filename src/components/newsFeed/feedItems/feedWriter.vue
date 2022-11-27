@@ -13,7 +13,7 @@
       >
       <span>
         {{ feed.writer }} |
-        {{ this.$moment(feed.createdAt).startOf("hour").fromNow() }}
+        {{ this.$moment(feed.created_at).fromNow() }}
       </span>
     </div>
   </div>
